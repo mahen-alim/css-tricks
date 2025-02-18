@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotating Circles Animation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+
+      .center-circle {
+        width: 100px;
+        height: 100px;
+        background-color: #000;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 18px;
+      }
+
+      .orbiting-circle {
+        width: 40px;
+        height: 40px;
+        background-color: #ccc;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .button-container {
+        margin-top: 350px; /* Tempatkan tombol di bawah bulatan */
+        text-align: center;
+      }
+
+      button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 0 10px;
+        cursor: pointer;
+        border: none;
+        background-color: #ccc;
+        color: white;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button:hover {
+        background-color: #000;
+      }
+
+      button i {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="center-circle">Pusat</div>
+      <!-- Bulatan kecil yang mengelilingi -->
+      <div
+        class="orbiting-circle"
+        style="transform: translate(-50%, -50%) rotate(0deg) translateX(120px)"
+      ></div>
+      <div
+        class="orbiting-circle"
+        style="transform: translate(-50%, -50%) rotate(60deg) translateX(120px)"
+      ></div>
+      <div
+        class="orbiting-circle"
+        style="
+          transform: translate(-50%, -50%) rotate(120deg) translateX(120px);
+        "
+      ></div>
+      <div
+        class="orbiting-circle"
+        style="
+          transform: translate(-50%, -50%) rotate(180deg) translateX(120px);
+        "
+      ></div>
+      <div
+        class="orbiting-circle"
+        style="
+          transform: translate(-50%, -50%) rotate(240deg) translateX(120px);
+        "
+      ></div>
+      <div
+        class="orbiting-circle"
+        style="
+          transform: translate(-50%, -50%) rotate(300deg) translateX(120px);
+        "
+      ></div>
+      <div class="button-container">
+        <button id="rotate-left"><i class="fas fa-arrow-left"></i></button>
+        <button id="rotate-right">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- <script>
+      let rotationAngle = 0;
+
+      document.getElementById("rotate-left").addEventListener("click", () => {
+        rotationAngle -= 60; // Putar 60 derajat ke kiri
+        updateCircles();
+      });
+
+      document.getElementById("rotate-right").addEventListener("click", () => {
+        rotationAngle += 60; // Putar 60 derajat ke kanan
+        updateCircles();
+      });
+
+      function updateCircles() {
+        const circles = document.querySelectorAll(".orbiting-circle");
+        circles.forEach((circle, index) => {
+          const angle = 60 * index + rotationAngle;
+          circle.style.transform = `translate(-50%, -50%) rotate(${angle}deg) translateX(120px)`;
+        });
+      }
+    </script> -->
+  </body>
+</html>

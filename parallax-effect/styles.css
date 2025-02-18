@@ -1,0 +1,27 @@
+body,
+html {
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.parallax {
+  background-image: url("img/lemon.jpg");
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  backround-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  height: 100vh;
+  padding: 50px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.content h1,
+.content p {
+  margin: 0;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Checkbox</title>
+    <style>
+      /* Sembunyikan checkbox default */
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      /* Style untuk label checkbox */
+      .checkbox-label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+      }
+
+      /* Kotak checkbox custom */
+      .checkbox-label::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #007bff;
+        border-radius: 4px;
+        margin-right: 10px;
+        transition: background-color 0.3s, border-color 0.3s;
+      }
+
+      /* Efek saat checkbox dicentang */
+      input[type="checkbox"]:checked + .checkbox-label::before {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+
+      /* Icon centang (gunakan ::after) */
+      input[type="checkbox"]:checked + .checkbox-label::after {
+        content: "✔";
+        position: absolute;
+        left: 5px;
+        color: white;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <label class="checkbox-label">
+      <input type="checkbox" />
+      Pilih opsi ini
+    </label>
+  </body>
+</html>

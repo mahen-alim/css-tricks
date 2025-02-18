@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attractive Landing Page with Navbar</title>
+    <style>
+      /* Styling untuk navbar */
+      .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 300px;
+        padding: 10px;
+        align-items: center;
+        background-color: rgba(44, 44, 44, 0.9);
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .hamburger-menu span {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 4px 0;
+        border-radius: 50px;
+      }
+
+      /* Styling untuk halaman utama */
+      #landing-page {
+        display: none; /* Sembunyikan halaman utama sampai loading selesai */
+        padding: 20px;
+        text-align: center;
+        background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+        color: white;
+        font-family: Arial, sans-serif;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #landing-page .empty-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        border: 1px solid #fff;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .cta-button {
+        margin-top: 30px;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        color: #000;
+        border: none;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="#" class="logo">MyLogo</a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Halaman Utama -->
+    <div id="landing-page">
+      <div class="empty-img"><strong>Image Here</strong></div>
+      <h1>Welcome to My Website!</h1>
+      <p>Discover amazing content and features.</p>
+      <button class="cta-button">Get Started</button>
+    </div>
+  </body>
+</html>

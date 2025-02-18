@@ -1,0 +1,18 @@
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.scroll-item {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-item img {
+  width: 50%;
+  height: 50%;
+}
